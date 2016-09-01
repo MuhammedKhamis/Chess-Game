@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1449942048 source:c:\users\muhammed\desktop\final\main.c
+	<stdio.h>
+	<string.h>
+	"cs50.h"
+	"Muhammeds.h"
+
+1375706148 c:\users\muhammed\desktop\final\cs50.h
+	<float.h>
+	<limits.h>
+	<stdbool.h>
+	<stdlib.h>
+
+1375706140 source:c:\users\muhammed\desktop\final\cs50.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cs50.h"
+
+1449941838 c:\users\muhammed\desktop\final\muhammeds.h
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+
+1449941815 source:c:\users\muhammed\desktop\final\muhammeds.c
+	<stdio.h>
+	<math.h>
+	<ctype.h>
+	<string.h>
+	"Muhammeds.h"
+
+1375706140 source:e:\final\cs50.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cs50.h"
+
+1375706148 e:\final\cs50.h
+	<float.h>
+	<limits.h>
+	<stdbool.h>
+	<stdlib.h>
+
+1450347631 source:e:\final\main.c
+	<stdio.h>
+	<string.h>
+	"cs50.h"
+	"Muhammeds.h"
+
+1450346520 e:\final\muhammeds.h
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+
+1450354977 source:e:\final\muhammeds.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"Muhammeds.h"
+

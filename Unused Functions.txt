@@ -1,0 +1,293 @@
+//int getRidof(int c , int d,char ar[][10])
+//{
+//    int a ,b,find=0,color;
+//    //color to see if black or white
+//    for(a=1;a<9&&find==0;a++)
+//    {
+//        for(b=1;b<9&&find==0;b++)
+//        {
+//            if(checkpown(a,b,c,d,ar)&&ar[a][b]=='P')
+//                find=1;
+//            else if (checkrook(a,b,c,d,ar)&&ar[a][b]=='R')
+//                find=1;
+//            else if (checkbishop(a,b,c,d,ar)&&ar[a][b]=='B')
+//                find=1;
+//            else if (checkqueen(a,b,c,d,ar)&&ar[a][b]=='Q')
+//                find=1;
+//            else if (checkknight(a,b,c,d,ar)&&ar[a][b]=='N')
+//                find=1;
+//        }
+//    }
+//    return find ;
+//}
+//
+//int cutWay(int c, int d,char ar[][10])
+//{
+//    int a , b , g , find=0;
+//    int l = checkpiece(&ar[c][d]);
+//    //if(islower(ar[c][d]))
+//    for(a=1; a<9&&find==0; a++)
+//    {
+//        for(b=0; b<9&&find==0; b++)
+//        {
+//            if(ar[c][d]=='r'||ar[c][d]=='q')
+//            {
+//                if(c==x)
+//                {
+//                    for(g=d; g<y; g++)
+//                    {
+//                        if(checkrook(a,b,c,g,c[][10])&&c[a][b]=='R')
+//                            find=1;
+//                        else if(checkknight(a,b,c,g,c[][10])&&c[a][b]=='N')
+//                            find=1;
+//                        else if(checkbishop(a,b,c,g,c[][10])&&c[a][b]=='B')
+//                            find=1;
+//                        else if(checkqueen(a,b,c,g,c[][10])&&c[a][b]=='Q')
+//                            find=1;
+//                        else if(checkpawn(a,b,c,g,c[][10])&&c[a][b]=='P')
+//                            find=1;
+//                    }
+//                }
+//                if(d==y)
+//                {
+//                    for(g=c; g<x; g++)
+//                    {
+//                        if(checkrook(a,b,g,d,c[][10])&&c[a][b]=='R')
+//                            find=1;
+//                        else if(checkknight(a,b,g,d,c[][10])&&c[a][b]=='N')
+//                            find=1;
+//                        else if(checkbishop(a,b,g,d,c[][10])&&c[a][b]=='B')
+//                            find=1;
+//                        else if(checkqueen(a,b,g,d,c[][10])&&c[a][b]=='Q')
+//                            find=1;
+//                        else if(checkpawn(a,b,g,d,c[][10])&&c[a][b]=='P')
+//                            find=1;
+//                    }
+//                }
+//            }
+//            else if(c[c][d]=='b'||c[c][d]=='q')
+//            {
+//                int o;
+//                for(g=c; g<x; g++)
+//                {
+//                    for(o=d; o<y; o++)
+//                    {
+//                        if(c>x&&d>y)
+//                        {
+//                            while((c-g)==(d-o))
+//                            {
+//                                if(checkrook(a,b,g,o,c[][10])&&c[a][b]=='R')
+//                                    find=1;
+//                                else if(checkknight(a,b,g,o,c[][10])&&c[a][b]=='N')
+//                                    find=1;
+//                                else if(checkbishop(a,b,g,o,c[][10])&&c[a][b]=='B')
+//                                    find=1;
+//                                else if(checkqueen(a,b,g,o,c[][10])&&c[a][b]=='Q')
+//                                    find=1;
+//                                else if(checkpawn(a,b,g,o,c[][10])&&c[a][b]=='P')
+//                                    find=1;
+//                            }
+//                        }
+//                        else if(c>x&&d<y)
+//                        {
+//                            while((c-g)==o-d)
+//                            {
+//                                if(checkrook(a,b,g,o,c[][10])&&c[a][b]=='R')
+//                                    find=1;
+//                                else if(checkknight(a,b,g,o,c[][10])&&c[a][b]=='N')
+//                                    find=1;
+//                                else if(checkbishop(a,b,g,o,c[][10])&&c[a][b]=='B')
+//                                    find=1;
+//                                else if(checkqueen(a,b,g,o,c[][10])&&c[a][b]=='Q')
+//                                    find=1;
+//                                else if(checkpawn(a,b,g,o,c[][10])&&c[a][b]=='P')
+//                                    find=1;
+//                            }
+//                        }
+//                        else if(c<x&&d>y)
+//                        {
+//                            while((g-c)==(d-o))
+//                            {
+//                                if(checkrook(a,b,g,o,c[][10])&&c[a][b]=='R')
+//                                    find=1;
+//                                else if(checkknight(a,b,g,o,c[][10])&&c[a][b]=='N')
+//                                    find=1;
+//                                else if(checkbishop(a,b,g,o,c[][10])&&c[a][b]=='B')
+//                                    find=1;
+//                                else if(checkqueen(a,b,g,o,c[][10])&&c[a][b]=='Q')
+//                                    find=1;
+//                                else if(checkpawn(a,b,g,o,c[][10])&&c[a][b]=='P')
+//                                    find=1;
+//                            }
+//                        }
+//                        else if(c<x&&d<y)
+//                        {
+//                            while((g-c)==(o-d))
+//                            {
+//                                if(checkrook(a,b,g,o,c[][10])&&c[a][b]=='R')
+//                                    find=1;
+//                                else if(checkknight(a,b,g,o,c[][10])&&c[a][b]=='N')
+//                                    find=1;
+//                                else if(checkbishop(a,b,g,o,c[][10])&&c[a][b]=='B')
+//                                    find=1;
+//                                else if(checkqueen(a,b,g,o,c[][10])&&c[a][b]=='Q')
+//                                    find=1;
+//                                else if(checkpawn(a,b,g,o,c[][10])&&c[a][b]=='P')
+//                                    find=1;
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    return find;
+//}
+//checkmate checkValidation(char ar[][10],int k,int l)
+//{
+//    checkmate validation={0,0,0};
+//    int i,j,check;
+//    if(isupper(ar[k][l]))
+//    {
+//        for(i=1;i<9;i++)
+//        {
+//            for(j=1;j<9;j++)
+//            {
+//                check=checkpiece(&ar[i][j])
+//                if(check&&islower(ar[i][j]))
+//                {
+//                    if(checkmove(check,i,j,k,l,ar))
+//                      validation.counter++;
+//                }
+//            }
+//        }
+//    }
+//    else
+//    {
+//        for(i=1;i<9;i++)
+//        {
+//            for(j=1;j<9;j++)
+//            {
+//                check=checkpiece(&ar[i][j])
+//                if(check&&isupper(ar[i][j]))
+//                {
+//                    if(checkmove(check,i,j,k,l,ar))
+//                    {
+//                      validation.counter++;
+//                      validation.x=i;
+//                      validation.y=j;
+//                    }
+//
+//
+//            }
+//        }
+//
+//    }
+//    return validation;
+//}
+//
+//int sidesValidation(char ar[][10],int k,int l)
+//{
+//    int i ,checks[8]={0},check ,j ;
+//    if(isupper(ar[k][l]))
+//    {
+//        for(i=1;i<9;i++)
+//        {
+//            for(j=1;j<9;j++)
+//            {
+//                check= checkpiece(&ar[i][j])
+//                if(check&&islower(ar[i][j]))
+//                {
+//                    if(checkmove(check,i,j,k-1,l-1,ar))
+//                        checks[0]++;
+//                    if(checkmove(check,i,j,k+1,l+1,ar))
+//                        checks[1]++;
+//                    if(checkmove(check,i,j,k-1,l,ar))
+//                        checks[2]++;
+//                    if(checkmove(check,i,j,k-1,l+1,ar))
+//                        checks[3]++;
+//                    if(checkmove(check,i,j,k,l-1,ar))
+//                        checks[4]++;
+//                    if(checkmove(check,i,j,k,l+1,ar))
+//                        checks[5]++;
+//                    if(checkmove(check,i,j,k+1,l-1,ar))
+//                        checks[6]++;
+//                    if(checkmove(check,i,j,k+1,l,ar))
+//                        checks[7]++;
+//                }
+//            }
+//        }
+//    }
+//    else
+//    {
+//        for(i=1;i<9;i++)
+//        {
+//            for(j=1;j<9;j++)
+//            {
+//                check= checkpiece(&ar[i][j])
+//                if(check&&isupper(ar[i][j]))
+//                {
+//                    if(checkmove(check,i,j,k-1,l-1,ar))
+//                        checks[0]++;
+//                    if(checkmove(check,i,j,k+1,l+1,ar))
+//                        checks[1]++;
+//                    if(checkmove(check,i,j,k-1,l,ar))
+//                        checks[2]++;
+//                    if(checkmove(check,i,j,k-1,l+1,ar))
+//                        checks[3]++;
+//                    if(checkmove(check,i,j,k,l-1,ar))
+//                        checks[4]++;
+//                    if(checkmove(check,i,j,k,l+1,ar))
+//                        checks[5]++;
+//                    if(checkmove(check,i,j,k+1,l-1,ar))
+//                        checks[6]++;
+//                    if(checkmove(check,i,j,k+1,l,ar))
+//                        checks[7]++;
+//                }
+//            }
+//        }
+//    }
+//
+//    for(i=0;i<8;i++)
+//    {
+//        if(checks[i]==0)
+//            return 0;
+//    }
+//    return 1 ;
+//}
+//
+//int killThreat(char ar[][10],checkmate check)
+//{
+//    int i , j,check1 ;
+//    if(isupper(ar[check.x][check.y]))
+//    {
+//        for(i=1;i<9;i++)
+//        {
+//            for(j=0;j<9;j++)
+//            {
+//                check1=checkpiece(&ar[i][j])
+//                if(check1&&islower(ar[i][j]))
+//                {
+//                    if(checkmove(check1,i,j,check.x,check.y,ar))
+//                        return 1 ;
+//                }
+//            }
+//        }
+//    }
+//    else
+//    {
+//        for(i=1;i<9;i++)
+//        {
+//            for(j=0;j<9;j++)
+//            {
+//                check1=checkpiece(&ar[i][j])
+//                if(check1&&isupper(ar[i][j]))
+//                {
+//                    if(checkmove(check1,i,j,check.x,check.y,ar))
+//                        return 1 ;
+//                }
+//            }
+//        }
+//    }
+//    return 0 ;
+//}
